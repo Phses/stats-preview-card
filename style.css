@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Open+Sans:wght@300&family=Poppins:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background-color: hsl(233, 47%, 7%);
+    line-height: 1.6;
+}
+
+
+
+.flex-itens {
+    display: flex;
+    height: 100vh;
+    padding: 0 150px;
+    align-items: center;
+}
+
+.flex-itens .row {
+    display: flex;
+    
+}
+
+.flex-itens .column-1 {
+    padding: 60px 90px 60px 60px;
+    background: hsl(244, 38%, 16%);
+    border: 2px solid hsl(244, 38%, 16%);
+    border-radius: 10px 0 0 10px;
+}
+
+.flex-itens .column-1, .flex-itens .column-2 {
+    flex: 1 1 300px;
+}
+
+.column-1 h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.column-1 h2 span {
+    color: hsl(277, 64%, 61%);
+}
+
+.column-1 p {
+    font-size: 0.85rem;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.flex-itens .column-2 img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid hsl(244, 38%, 16%);
+    border-radius: 0px 10px 10px 0px;
+    object-fit: cover;
+}
+
+.flex-itens .column-2 {
+    position: relative;
+}
+
+.flex-itens .column-2::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid hsl(244, 38%, 16%);
+    border-radius: 0px 10px 10px 0px;
+    background-color: hsl(277, 64%, 61%,0.6);
+}
+
+
+.flex-itens .column-1 .data-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.column-1 .data-flex h3 {
+    font-size: 1.4rem;
+}
+
+.column-1 .data-flex p {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+@media(max-width: 768px) {
+
+    body {
+        line-height: 1.2;
+    }
+
+    p{
+        line-height: 1.6;
+    }
+
+    .flex-itens {
+        padding: 20px;
+    }
+
+    .flex-itens .row {
+        flex-direction: column-reverse;
+    }
+
+    .column-1 h2 {
+        font-size: 1.6em;
+        margin-bottom: 15px;
+    }
+
+    .flex-itens .row .column-1 {
+        text-align: center;
+        padding: 30px;
+    }
+
+    .flex-itens .column-1 .data-flex {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .flex-itens .column-1 .data-flex > div {
+        padding-top: 25px;
+    }
+}
+
